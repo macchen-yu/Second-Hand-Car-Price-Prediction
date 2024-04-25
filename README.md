@@ -8,13 +8,13 @@
 
 ## 檔案說明
 
-- `car data.csv`: 原始數據
-- `data_processing.ipynb`: 數據前處理的Jupyter Notebook
-- `Predict.csv`: 經過前處理後的數據
-- `train.py`: 訓練模型的Python腳本
-- `view_pt_variables.py`: 查看模型參數的Python腳本
-- `best_model.pt`: 訓練後得到的模型權重檔案
-- `Linear_Regression.cpp`: 使用C++實現預測的主程式
+- `./py/car data.csv`: 原始數據
+- `./py/data_processing.ipynb`: 數據前處理的Jupyter Notebook
+- `./py/Predict.csv`: 經過前處理後的數據
+- `./py/train.py`: 訓練模型的Python腳本
+- `./py/view_pt_variables.py`: 查看模型參數的Python腳本
+- `./py/best_model.pt`: 訓練後得到的模型權重檔案
+- `main.cpp`: 使用C++實現預測的主程式
 
 ## 數據前處理
 
@@ -46,7 +46,7 @@
 
 ### C++實現
 
-C++主程式`Linear_Regression.cpp`實現了預測功能。主要步驟包括:
+C++主程式`main.cpp`實現了預測功能。主要步驟包括:
 
 1. 從`Predict.csv`讀取輸入數據
 2. 將訓練後的模型權重參數複製到`WEIGHT`矩陣中
@@ -54,4 +54,7 @@ C++主程式`Linear_Regression.cpp`實現了預測功能。主要步驟包括:
 4. 將模型的bias參數加入預測價格中
 5. 顯示選定的輸入數據、實際價格和模型預測價格
 
-該程式也提供GIF動畫呈現預測結果。
+## 執行predict程式
+```shell
+.\build\Debug\predict.exe
+```
